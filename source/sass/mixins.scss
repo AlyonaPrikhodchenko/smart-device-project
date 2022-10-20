@@ -1,78 +1,78 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
+// @mixin retina {
+//   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//     @content;
+//   }
+// }
 
-@mixin hover {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-}
+// @mixin hover {
+//   @media (hover: hover) {
+//     &:hover:not(.focus-visible) {
+//       @content;
+//     }
+//   }
+// }
 
-@mixin focus {
-  &.focus-visible:focus {
-    @content;
-  }
-}
+// @mixin focus {
+//   &.focus-visible:focus {
+//     @content;
+//   }
+// }
 
-@mixin active {
-  &.focus-visible:active {
-    @content;
-  }
-}
+// @mixin active {
+//   &.focus-visible:active {
+//     @content;
+//   }
+// }
 
-@mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
+// @mixin hover-focus {
+//   @media (hover: hover) {
+//     &:hover:not(.focus-visible) {
+//       @content;
+//     }
+//   }
 
-  &.focus-visible:focus {
-    @content;
-  }
-}
+//   &.focus-visible:focus {
+//     @content;
+//   }
+// }
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-1919 {
+//   @media (max-width: ($vp-1920 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-1439 {
+//   @media (max-width: ($vp-1440 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-1279 {
+//   @media (max-width: ($vp-1280 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-1023 {
+//   @media (max-width: ($vp-1024 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-767 {
+//   @media (max-width: ($vp-768 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-374 {
+//   @media (max-width: ($vp-375 - 1px)) {
+//     @content;
+//   }
+// }
 
 // Mobile first
 
@@ -116,3 +116,31 @@
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+
+
+@mixin fontPT ($weight, $fs, $lh, $color) {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: $fs;
+  font-weight: $weight;
+  font-style: normal;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin fontRoboto ($weight, $fs, $lh, $color) {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $fs;
+  font-weight: $weight;
+  font-style: normal;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin fontRobotoCondensed ($weight, $fs, $lh, $color) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: $fs;
+  font-weight: $weight;
+  font-style: normal;
+  line-height: $lh;
+  color: $color;
+}

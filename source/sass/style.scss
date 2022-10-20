@@ -8,18 +8,25 @@
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+// @import "variables";
+// @import "mixins";
+// @import "global/fonts";
+// @import "global/reboot";
+// @import "global/utils";
+// @import "global/container";
+
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/reboot.scss";
+@import "./global/utils.scss";
+@import "./global/container.scss";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+// @import "blocks/btn";
+// @import "blocks/modal";
 
 // ---------------------------------
 
