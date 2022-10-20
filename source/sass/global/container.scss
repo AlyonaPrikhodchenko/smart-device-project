@@ -19,15 +19,18 @@
 
 
 .container {
-  max-width: 1220px;
-  width: 63.54%;
   margin: 0 auto;
 
-  @media (max-width: $tablet) {
+  @media (min-width: $desktop-min) {
+    max-width: 1220px;
+    width: 95%;
+  }
+
+  @media (max-width: $tablet-max) {
     width: 87.01%;
   }
 
-  @media (max-width: $tel) {
+  @media (max-width: $tel-max) {
     min-width: 270px;
     width: 84.37%;
   }

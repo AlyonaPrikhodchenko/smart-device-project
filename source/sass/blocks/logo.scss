@@ -5,11 +5,11 @@
 .logo__img {
   margin-top: 5px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-max) {
     margin-top: 10px;
   }
 
-  @media (max-width: $tel) {
+  @media (max-width: $tel-max) {
     width: 35px;
     height: 35px;
   }

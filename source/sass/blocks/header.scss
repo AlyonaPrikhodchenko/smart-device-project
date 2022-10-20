@@ -4,11 +4,11 @@
   padding: 25px 0 35px;
   background-image: linear-gradient(180deg, $color-primary-dark 84.9%, rgba(4, 24, 39, 0) 100%);
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-max) {
     padding: 10px 0 30px;
   }
 
-  @media (max-width: $tel) {
+  @media (max-width: $tel-max) {
     padding: 5px 0 25px;
   }
 }
@@ -20,22 +20,27 @@
 }
 
 .header__logo {
-  margin-right: 161px;
-
-  @media (max-width: $tel) {
-    margin-right: 0;
-  }
+  margin-right: auto;
 }
 
 .header__menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
+  margin-left: 7px;
   padding: 0;
+  width: 474px;
   list-style: none;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-max) {
     margin-left: auto;
+    width: auto;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-left: auto;
+    width: auto;
   }
 }
 
@@ -89,7 +94,7 @@
     opacity: 0.5;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-max) {
     width: 40px;
     height: 40px;
     margin-right: 20px;
@@ -101,7 +106,7 @@
     }
   }
 
-  @media (max-width: $tel) {
+  @media (max-width: $tel-max) {
     &--mail {
       margin-right: 20px;
     }
@@ -113,13 +118,24 @@
 }
 
 .header__link-text {
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+
+  @media (max-width: $tel-max) {
     display: none;
   }
 }
 
 .header__button {
-  @media (max-width: $tablet) {
+  margin-right: 61px;
+  margin-left: auto;
+
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+
+  @media (max-width: $tel-max) {
     display: none;
   }
 }
