@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Smart Device">
-    <title>Smart Device</title>
-    <link rel="preload" href="./fonts/PTMono-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Roboto-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container">
-          Header
-        </div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            Main
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container">
-          Footer
-        </div>
-      </footer>
-    </div>
 
-    <!-- Модалки -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Device">
+  <title>Smart Device</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo">
+          <picture>
+            <source media="(max-width: 320px)" srcset="./img/content/logo-320.svg">
+            <img class="logo__img" src="./img/content/logo.svg" width="215" height="55"
+              alt="Логотип сайта Smart Device.">
+          </picture>
+        </a>
+
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__link header__link--mail" href="mailto:info@sd.ru">
+              <span class="header__link-text">info@sd.ru</span>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__link header__link--tel" href="tel:+74950005252">
+              <span class="header__link-text">+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
+
+
+        <button class="header__button button" type="button">Заказать звонок</button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__intro intro">
+        <div class="intro__container container">
+          Main
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        Footer
+      </div>
+    </footer>
+  </div>
+
+  <!-- Модалки -->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

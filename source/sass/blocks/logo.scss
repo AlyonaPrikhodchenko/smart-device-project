@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+}
+
+.logo__img {
+  margin-top: 5px;
+
+  @media (max-width: $tablet) {
+    margin-top: 10px;
+  }
+
+  @media (max-width: $tel) {
+    width: 35px;
+    height: 35px;
+  }
+}

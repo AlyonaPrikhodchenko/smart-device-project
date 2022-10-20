@@ -22,16 +22,12 @@
   max-width: 1220px;
   width: 63.54%;
   margin: 0 auto;
-}
 
-@media (max-width: $tablet) {
-  .container {
+  @media (max-width: $tablet) {
     width: 87.01%;
   }
-}
 
-@media (max-width: $tel) {
-  .container {
+  @media (max-width: $tel) {
     min-width: 270px;
     width: 84.37%;
   }
