@@ -1,0 +1,23 @@
+.main__intro {
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-bottom: 50px;
+  }
+}
+
+.main__advantages {
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-bottom: 50px;
+  }
+}

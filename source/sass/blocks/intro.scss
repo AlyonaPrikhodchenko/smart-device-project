@@ -3,16 +3,25 @@
   padding-bottom: 280px;
   background-color: $color-primary-dark;
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg.jpg");
-  background-size: cover;
+  background-size: 1920px 880px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg@2x.jpg");
+  }
 
   @media (max-width: $tablet-max) {
     padding-top: 178px;
     padding-bottom: 205px;
+    background-size: 1396px 640px;
+    background-position: 20% 0%;
   }
 
   @media (max-width: $tel-max) {
     padding-top: 150px;
     padding-bottom: 190px;
+    background-size: cover;
+    background-position: 26% 0%;
   }
 }
 
@@ -28,7 +37,7 @@
   }
 }
 
-.intro__title {
+.intro h1 {
   margin: 0;
   margin-bottom: 33px;
   text-transform: uppercase;
@@ -49,7 +58,7 @@
   }
 }
 
-.intro__description {
+.intro p {
   margin: 0;
   margin-bottom: 48px;
   width: 56.14%;
