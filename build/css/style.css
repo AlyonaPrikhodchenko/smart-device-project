@@ -650,6 +650,7 @@ button,
 
 .header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   padding: 25px 0 35px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
@@ -771,6 +772,10 @@ button,
   margin-bottom: 120px;
 }
 
+.main__about {
+  margin-bottom: 100px;
+}
+
 .intro {
   padding-top: 303px;
   padding-bottom: 280px;
@@ -813,6 +818,7 @@ button,
 
 .intro__button {
   display: inline-block;
+  vertical-align: middle;
   padding: 17px 27px;
   font-size: 18px;
   line-height: 21px;
@@ -829,19 +835,23 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 32px;
-  -moz-column-gap: 32px;
-  column-gap: 32px;
+  -webkit-column-gap: 33px;
+  -moz-column-gap: 33px;
+  column-gap: 33px;
   row-gap: 30px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .advantages__item {
-  padding: 40px 45px 35px;
+  padding: 40px 40px 35px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
+  min-height: 300px;
 }
 
 .advantages__item:hover {
@@ -851,7 +861,7 @@ button,
 
 .advantages__item svg {
   fill: #00b2ff;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .advantages__item:hover svg {
@@ -860,7 +870,7 @@ button,
 
 .advantages__item h3 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -882,6 +892,86 @@ button,
 .advantages__item:hover h3,
 .advantages__item:hover p {
   color: #f2f5f6;
+}
+
+.about__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.about__container > span {
+  margin-top: 3px;
+  margin-right: 69px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 156px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 180px;
+  color: transparent;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("../img/background/mask-text-bg.png");
+  background-repeat: repeat;
+  background-position: 10% 10%;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.about__content h2 {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 51px;
+  color: #041827;
+}
+
+.about__content-text {
+  margin-bottom: 40px;
+}
+
+.about__content-text p {
+  margin: 0;
+  margin-bottom: 19px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22px;
+  color: #041827;
+}
+
+.about__button {
+  color: #00b2ff;
+  border-color: #00b2ff;
+  padding: 14px 12px;
+  width: 180px;
+  margin-top: auto;
+}
+
+.js-hidden {
+  display: none;
 }
 
 /* @mixin hover-focus {
@@ -980,6 +1070,10 @@ button,
     margin-bottom: 80px;
   }
 
+  .main__about {
+    margin-bottom: 80px;
+  }
+
   .intro {
     padding-top: 178px;
     padding-bottom: 205px;
@@ -1004,6 +1098,37 @@ button,
 
   .intro__button {
     margin-left: 45px;
+  }
+
+  .advantages__item {
+    padding: 40px 30px 28px 40px;
+    min-height: 360px;
+  }
+
+  .advantages__item svg {
+    margin-bottom: 7px;
+  }
+
+  .advantages__item h3 {
+    margin-bottom: 6px;
+  }
+
+  .about__container > span {
+    margin-right: 2px;
+    line-height: 173px;
+  }
+
+  .about__content h2 {
+    line-height: 45px;
+  }
+
+  .about__content-text {
+    margin-bottom: 22px;
+  }
+
+  .about__button {
+    width: 160px;
+    padding: 10px 12px;
   }
 }
 
@@ -1048,7 +1173,7 @@ button,
   }
 
   .main__advantages {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .intro {
@@ -1101,7 +1226,8 @@ button,
   }
 
   .advantages__item {
-    padding: 30px 30px 35px;
+    padding: 30px 25px 35px;
+    min-height: 340px;
   }
 
   .advantages__item svg {
@@ -1110,6 +1236,7 @@ button,
   }
 
   .advantages__item h3 {
+    margin-bottom: 10px;
     font-size: 20px;
     line-height: 28px;
   }
@@ -1118,6 +1245,41 @@ button,
     font-size: 14px;
     line-height: 19px;
   }
+
+  .advantages__item--mobile {
+    min-height: 325px;
+  }
+
+  .advantages__item--mobile svg {
+    margin-bottom: 10px;
+  }
+
+  .advantages__item--mobile h3 {
+    margin-bottom: 15px;
+  }
+
+  .about__container > span {
+    display: none;
+  }
+
+  .about__content h2 {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__content-text {
+    margin-bottom: 10px;
+  }
+
+  .about__content-text p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .js-text-hidden {
+    display: none;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
@@ -1125,5 +1287,9 @@ button,
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/intro-bg@2x.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg@2x.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg@2x.jpg");
+  }
+
+  .about__container > span {
+    background-image: url("../img/background/mask-text-bg@2x.png");
   }
 }

@@ -1,0 +1,101 @@
+.about__container {
+  position: relative;
+  display: flex;
+  align-items: start;
+}
+
+.about__container > span {
+  margin-top: 3px;
+  margin-right: 69px;
+
+  @include fontRobotoCondensed(700, 156px, 180px, transparent);
+
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  background-clip: text;
+  background-image: url("../img/background/mask-text-bg.png");
+  background-repeat: repeat;
+  background-position: 10% 10%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/mask-text-bg@2x.png");
+  }
+
+  @media (max-width: $tablet-max) {
+    margin-right: 2px;
+    line-height: 173px;
+  }
+
+  @media (max-width: $tel-max) {
+    display: none;
+  }
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__content h2 {
+  margin: 0;
+  margin-bottom: 13px;
+
+  @include fontRobotoCondensed(400, 36px, 51px, $color-primary-dark);
+
+  @media (max-width: $tablet-max) {
+    line-height: 45px;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__content-text {
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-bottom: 10px;
+  }
+}
+
+.about__content-text p {
+  margin: 0;
+  margin-bottom: 19px;
+
+  @include fontPT(400, 16px, 22px, $color-primary-dark);
+
+  @media (max-width: $tel-max) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__button {
+  color: $color-accent;
+  border-color: $color-accent;
+  padding: 14px 12px;
+  width: 180px;
+  margin-top: auto;
+
+  @media (max-width: $tablet-max) {
+    width: 160px;
+    padding: 10px 12px;
+  }
+}
+
+.js-hidden {
+  display: none;
+}
+
+.js-text-hidden {
+  @media (max-width: $tel-max) {
+    display: none;
+  }
+}
