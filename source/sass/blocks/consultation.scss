@@ -1,0 +1,87 @@
+.consultation {
+  position: relative;
+  z-index: 0;
+  background-color: $color-accent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 24, 39, 0.5);
+    clip-path: polygon(0 100%, 0 0, 50.6% 0);
+  }
+
+  @media (max-width: $tablet-max) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.consultation__container {
+  display: flex;
+  padding-top: 168px;
+  padding-bottom: 248px;
+
+  @media (max-width: $tablet-max) {
+    padding-top: 46px;
+    padding-bottom: 125px;
+  }
+
+  @media (max-width: $tel-max) {
+    padding-bottom: 89px;
+  }
+}
+
+.consultation__image {
+  margin-top: 79px;
+  margin-right: 115px;
+
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+}
+
+.consultation__content {
+  @media (max-width: $tel-max) {
+    margin: 0 auto;
+  }
+}
+
+.consultation__content h2 {
+  margin: 0;
+  margin-bottom: 11px;
+
+  @include fontRobotoCondensed(400, 36px, 50px, $color-white);
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 7px;
+  }
+
+  @media (max-width: $tel-max) {
+    margin-bottom: 8px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.consultation__content p {
+  margin: 0;
+  margin-left: 4px;
+  margin-bottom: 35px;
+
+  @include fontPT(400, 16px, 22px, $color-white);
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+
+  @media (max-width: $tel-max) {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 36px;
+  }
+}

@@ -1,18 +1,18 @@
-const content = document.querySelector('.js-about-content-text');
-const button = document.querySelector('.js-button');
-const buttonText = document.querySelectorAll('.js-button-text');
-const textSpan = document.querySelector('.js-text');
+const content = document.querySelector('.about__content-text-hidden');
+const button = document.querySelector('.about__button');
+const buttonText = document.querySelectorAll('.about__button-text');
+const textMobile = document.querySelector('.about__text');
 
 const openDescription = () => {
   button.addEventListener('click', () => {
-    content.classList.toggle('js-hidden');
-    textSpan.classList.toggle('js-text-hidden');
+    content.classList.toggle('hidden');
+    textMobile.classList.toggle('about__text--hidden');
 
     buttonText.forEach((text) => {
-      if (text.classList.contains('js-hidden')) {
-        text.classList.remove('js-hidden');
+      if (text.classList.contains('hidden')) {
+        text.classList.remove('hidden');
       } else {
-        text.classList.add('js-hidden');
+        text.classList.add('hidden');
       }
     });
   });
