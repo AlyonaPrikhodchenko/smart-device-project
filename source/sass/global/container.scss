@@ -20,11 +20,8 @@
 
 .container {
   margin: 0 auto;
-
-  @media (min-width: $desktop-min) {
-    max-width: 1220px;
-    width: 95%;
-  }
+  max-width: 1220px;
+  width: 95%;
 
   @media (max-width: $tablet-max) {
     width: 87.01%;
