@@ -20,7 +20,6 @@
   border-left: 5px solid $color-accent;
   min-height: 300px;
 
-
   &:hover {
     background-color: $color-accent;
     border-color: transparent;
@@ -72,6 +71,12 @@
   }
 }
 
+.advantages__item--personal h3 {
+  @media (max-width: $tablet-max) {
+    margin-bottom: 0;
+  }
+}
+
 .advantages__item p {
   margin: 0;
 
@@ -80,6 +85,12 @@
   @media (max-width: $tel-max) {
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+.advantages__item--personal p {
+  @media (max-width: $tablet-max) {
+    width: 230px;
   }
 }
 
