@@ -1376,10 +1376,6 @@ button,
   flex-wrap: wrap;
 }
 
-.footer__primary {
-  margin-right: 160px;
-}
-
 .footer__logo {
   display: block;
   margin-bottom: 30px;
@@ -1447,6 +1443,7 @@ button,
 }
 
 .footer__links {
+  margin: 0 auto;
   width: 400px;
 }
 
@@ -1726,6 +1723,11 @@ button,
     margin: 0;
   }
 
+  .footer__links {
+    margin: 0;
+    width: auto;
+  }
+
   .footer__links-lists {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1733,7 +1735,7 @@ button,
   }
 
   .footer__contacts {
-    width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -2016,9 +2018,11 @@ button,
   .footer__title {
     margin: 0;
     padding: 25px 75px 25px 25px;
+    width: 100%;
   }
 
   .footer__links {
+    width: 100%;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
@@ -2035,6 +2039,9 @@ button,
   }
 
   .footer__contacts {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
