@@ -218,23 +218,25 @@
 }
 
 .footer__accordion-name {
-  position: relative;
+  @media (max-width: $tel-max) {
+    position: relative;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 26px;
-    width: 15px;
-    height: 1px;
-    background-color: $color-light-bg;
-    font-weight: 700;
-    transition: all 1s;
-  }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      width: 15px;
+      height: 1px;
+      background-color: $color-light-bg;
+      font-weight: 700;
+      transition: all 1s;
+    }
 
-  &--close::after {
-    transform: rotate(90deg);
+    &--close::after {
+      transform: rotate(90deg);
+    }
   }
 }
 

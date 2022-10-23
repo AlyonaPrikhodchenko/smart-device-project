@@ -2,6 +2,7 @@ import { iosVhFix } from './utils/ios-vh-fix';
 // import { initModals } from './modules/modals/init-modals';
 import { openDescription } from './modules/project/about';
 import { makeMaskPhoneNumber, removeDefault } from './modules/project/validation';
+import { initAccordion } from './modules/project/accordion';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     openDescription();
     makeMaskPhoneNumber();
     removeDefault();
+    initAccordion();
   });
 });
 
