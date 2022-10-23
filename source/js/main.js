@@ -3,6 +3,7 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { openDescription } from './modules/project/about';
 import { makeMaskPhoneNumber, removeDefault } from './modules/project/validation';
 import { initAccordion } from './modules/project/accordion';
+import { openModalWindow } from './modules/project/modal';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     // initModals();
+    openModalWindow();
     openDescription();
     makeMaskPhoneNumber();
     removeDefault();
