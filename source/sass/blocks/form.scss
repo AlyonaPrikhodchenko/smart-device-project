@@ -25,19 +25,20 @@
   border-radius: 3px;
   outline: none;
 
-  @include fontPT(400, 16px, 22px, $color-white);
+  @include fontPT(400, 16px, 22px, $color-primary-dark);
 
   &::placeholder {
     @include fontPT(400, 16px, 22px, $color-white);
   }
 
-  &:focus-visible {
-    outline: 1px solid $color-accent;
-    outline-offset: 2px;
-  }
-
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-white;
+    outline-offset: 2px;
+    opacity: 1;
   }
 
   @media (max-width: $tel-max) {
@@ -63,19 +64,20 @@
   border-radius: 3px;
   outline: none;
 
-  @include fontPT(400, 16px, 22px, $color-white);
+  @include fontPT(400, 16px, 22px, $color-primary-dark);
 
   &::placeholder {
     @include fontPT(400, 16px, 22px, $color-white);
   }
 
-  &:focus-visible {
-    outline: 1px solid $color-accent;
-    outline-offset: 2px;
-  }
-
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-white;
+    outline-offset: 2px;
+    opacity: 1;
   }
 
   @media (max-width: $tablet-max) {
@@ -105,6 +107,11 @@
     width: 100%;
     margin-right: 0;
     margin-bottom: 0;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-white;
+    outline-offset: 2px;
   }
 }
 
@@ -155,4 +162,9 @@
 
 .form__checkbox input:checked + .form__checkbox-mark::before {
   display: block;
+}
+
+.form__checkbox input:focus-visible + .form__checkbox-mark {
+  outline: 1px solid $color-white;
+  outline-offset: 2px;
 }

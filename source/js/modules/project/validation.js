@@ -1,5 +1,5 @@
-const makeMaskPhoneNumber = () => {
-  const tel = document.querySelector('input[type=tel]');
+const makeMaskPhoneNumber = (form) => {
+  const tel = form.querySelector('input[type=tel]');
 
   const getInputNumbersValue = (input) => {
     return (input.value.replace(/\D/g, ''));
@@ -74,24 +74,19 @@ const makeMaskPhoneNumber = () => {
   tel.addEventListener('paste', onPhonePaste);
 };
 
-const removeDefault = () => {
-  const form = document.querySelector('form');
-  const inputs = form.querySelectorAll('input');
-  const textarea = form.querySelector('textarea');
+const removeDefault = (form) => {
+  const formBlock = form.querySelector('form');
 
-  form.addEventListener('submit', (evt) => {
+  formBlock.addEventListener('submit', (evt) => {
     evt.preventDefault();
-
-    inputs.forEach((input) => {
-      if (input.hasAttribute.checked) {
-        return (input.removeAttribute.checked);
-      } else {
-        return (input.value = '');
-      }
-    });
-
-    textarea.value = '';
+    evt.target.reset();
   });
+
 };
 
-export { makeMaskPhoneNumber, removeDefault };
+const initForm = (myForm) => {
+  makeMaskPhoneNumber(myForm);
+  removeDefault(myForm);
+};
+
+export {initForm};

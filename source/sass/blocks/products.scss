@@ -59,6 +59,7 @@
 }
 
 .products__item {
+  background-color: $color-primary-dark;
   background-image: url("../img/background/products-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,6 +74,10 @@
 
   &--accessories {
     background-position: 78.1% 65.3%;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/products-image@2x.jpg");
   }
 
   @media (max-width: $tablet-max) {

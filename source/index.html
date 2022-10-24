@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body contenteditable="">
+<body>
   <div class="wrapper">
     <header class="header">
       <div class="header__container container">
@@ -43,7 +43,7 @@
         </ul>
 
 
-        <button class="header__button button" type="button">Заказать звонок</button>
+        <a class="header__button button" href="./modal.html">Заказать звонок</a>
       </div>
     </header>
 
@@ -120,7 +120,7 @@
               </div>
             </div>
 
-            <button class="about__button button">
+            <button class="about__button button" type="button">
               <span class="about__button-text">Подробнее</span>
               <span class="about__button-text hidden">Свернуть</span>
             </button>
@@ -157,14 +157,14 @@
       <section class="consultation" id="consultation">
         <div class="consultation__container container">
           <div class="consultation__image">
-            <img src="./img/content/paper-airplane.png" width="510" height="285" alt="Бумажный самолёт.">
+            <img src="./img/content/paper-airplane.png" width="510" height="285" loading="lazy" alt="Бумажный самолёт.">
           </div>
           <div class="consultation__content">
             <h2 class="consultation__title">Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
 
             <div class="consultation__form form">
-              <form action="https://echo.htmlacademy.ru/" method="get">
+              <form action="https://echo.htmlacademy.ru/" method="post">
                 <div class="form__name">
                   <label>
                     <input type="text" name="name" placeholder="Имя" required>
@@ -172,7 +172,7 @@
                 </div>
                 <div class="form__tel">
                   <label>
-                    <input type="tel" name="tel" placeholder="Телефон" maxlength="12" required>
+                    <input type="tel" name="tel" placeholder="Телефон" required>
                   </label>
                 </div>
                 <div class="form__question">
@@ -201,7 +201,7 @@
         <div class="footer__primary">
           <div class="footer__logo">
             <a>
-              <img src="./img/content/logo.svg" width="215" height="55" alt="Логотип сайта Smart Device.">
+              <img src="./img/content/logo.svg" width="215" height="55" loading="lazy" alt="Логотип сайта Smart Device.">
             </a>
           </div>
 
@@ -296,7 +296,7 @@
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
         <div class="modal__form form-modal">
-          <form action="https://echo.htmlacademy.ru/" method="get">
+          <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="form-modal__name">
               <label>
                 <input type="text" name="name" placeholder="Имя" required>
@@ -304,7 +304,7 @@
             </div>
             <div class="form-modal__tel">
               <label>
-                <input type="tel" name="tel" placeholder="Телефон" maxlength="12" required>
+                <input type="tel" name="tel" placeholder="Телефон" required>
               </label>
             </div>
             <div class="form-modal__question">

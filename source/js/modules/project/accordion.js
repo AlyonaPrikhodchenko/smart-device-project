@@ -30,4 +30,4 @@ const initAccordion = () => {
   }
 };
 
-export { initAccordion };
+export {initAccordion};

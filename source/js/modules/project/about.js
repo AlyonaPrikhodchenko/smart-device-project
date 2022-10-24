@@ -18,4 +18,4 @@ const openDescription = () => {
   });
 };
 
-export { openDescription };
+export {openDescription};
