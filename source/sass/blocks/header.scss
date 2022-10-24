@@ -28,10 +28,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   margin-left: 7px;
   padding: 0;
-  width: 474px;
+  width: 480px;
   list-style: none;
 
   @media (max-width: $tablet-max) {
@@ -75,8 +76,6 @@
   }
 
   &--tel {
-    margin-right: 164px;
-
     &::before {
       background-image: url("../img/svg/phone-call-icon.svg");
     }

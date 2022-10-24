@@ -21,7 +21,8 @@
 }
 
 .consultation__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding-top: 168px;
   padding-bottom: 248px;
 

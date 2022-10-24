@@ -3,8 +3,9 @@
   padding-bottom: 280px;
   background-color: $color-primary-dark;
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg.jpg");
-  background-size: 1920px 880px;
+  // background-size: 1920px 880px;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/background/intro-bg@2x.jpg");
@@ -13,7 +14,7 @@
   @media (max-width: $tablet-max) {
     padding-top: 178px;
     padding-bottom: 205px;
-    background-size: 1396px 640px;
+    // background-size: 1396px 640px;
     background-position: 20% 0%;
   }
 
