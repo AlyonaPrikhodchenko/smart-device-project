@@ -688,7 +688,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
-  margin-left: 7px;
+  margin-left: 16px;
   padding: 0;
   width: 480px;
   list-style: none;
@@ -732,6 +732,10 @@ button,
 
 .header__link--mail::before {
   background-image: url("../img/svg/email-icon.svg");
+}
+
+.header__link--tel {
+  padding-right: 19px;
 }
 
 .header__link--tel::before {
@@ -1932,6 +1936,10 @@ button,
     transform: translate(-50%, -50%);
   }
 
+  .header__link--tel {
+    padding-right: 0;
+  }
+
   .header__link-text {
     display: none;
   }
@@ -2115,9 +2123,8 @@ button,
   }
 
   .footer__socials {
-    width: 140px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 5px;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }

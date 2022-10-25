@@ -1,4 +1,4 @@
-import {initForm} from './validation';
+import {initForm} from './validation.js';
 
 const openModalWindow = () => {
   const INTERECTIVE_ELEMENTS = ['button', 'a', 'input', 'textarea', '[tabindex]'];
@@ -23,9 +23,9 @@ const openModalWindow = () => {
     });
 
     const form = modalWindow.querySelector('.form-modal');
+    initForm(form);
     const inputName = form.querySelector('input[type=text]');
     inputName.focus();
-    initForm(form);
   });
 
   closeButton.addEventListener('click', () => {
