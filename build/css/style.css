@@ -830,6 +830,10 @@ button,
   border: none;
 }
 
+.intro__button-text {
+  vertical-align: middle;
+}
+
 .intro__button-text--tel {
   display: none;
 }

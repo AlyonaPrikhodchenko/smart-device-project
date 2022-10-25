@@ -4,18 +4,20 @@ const buttonText = document.querySelectorAll('.about__button-text');
 const textMobile = document.querySelector('.about__text');
 
 const openDescription = () => {
-  button.addEventListener('click', () => {
-    content.classList.toggle('hidden');
-    textMobile.classList.toggle('about__text--hidden');
+  if (button) {
+    button.addEventListener('click', () => {
+      content.classList.toggle('hidden');
+      textMobile.classList.toggle('about__text--hidden');
 
-    buttonText.forEach((text) => {
-      if (text.classList.contains('hidden')) {
-        text.classList.remove('hidden');
-      } else {
-        text.classList.add('hidden');
-      }
+      buttonText.forEach((text) => {
+        if (text.classList.contains('hidden')) {
+          text.classList.remove('hidden');
+        } else {
+          text.classList.add('hidden');
+        }
+      });
     });
-  });
+  }
 };
 
 export {openDescription};
