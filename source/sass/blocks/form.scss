@@ -91,30 +91,16 @@
   }
 }
 
-.form__button {
-  margin-right: 10px;
-  padding: 15px 25px 10px;
-  font-size: 16px;
-  line-height: 18px;
-  background-color: $color-primary-dark;
-  border-color: transparent;
-
-  @media (max-width: $tablet-max) {
-    width: 265px;
-  }
+.form__checkbox {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: $tel-max) {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  &:focus-visible {
-    outline: 1px solid $color-white;
-    outline-offset: 2px;
+    grid-template-columns: 1fr;
+    grid-column: auto;
   }
 }
-
 
 .form__checkbox label {
   display: flex;
@@ -167,4 +153,29 @@
 .form__checkbox input:focus-visible + .form__checkbox-mark {
   outline: 1px solid $color-white;
   outline-offset: 2px;
+}
+
+.form__button {
+  order: -1;
+  margin-right: 10px;
+  padding: 15px 25px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: $color-primary-dark;
+  border-color: transparent;
+
+  @media (max-width: $tablet-max) {
+    width: 265px;
+  }
+
+  @media (max-width: $tel-max) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-white;
+    outline-offset: 2px;
+  }
 }

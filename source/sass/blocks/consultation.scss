@@ -33,6 +33,7 @@
 
   @media (max-width: $tel-max) {
     padding-bottom: 89px;
+    grid-template-columns: 1fr;
   }
 }
 
