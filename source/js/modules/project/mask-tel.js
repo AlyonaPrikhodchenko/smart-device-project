@@ -47,6 +47,13 @@ const makeMaskPhoneNumber = (form) => {
         // Not russian number
         formattedInputValue = '';
       }
+
+      if (formattedInputValue.length !== 17) {
+        input.setCustomValidity('Введите полный номер телефона');
+      } else {
+        input.setCustomValidity('');
+      }
+
       return (input.value = formattedInputValue);
     };
 

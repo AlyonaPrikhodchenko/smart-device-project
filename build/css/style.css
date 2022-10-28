@@ -1575,13 +1575,14 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   background-color: rgba(3, 16, 27, 0.7);
+  overflow: scroll;
 }
 
 .modal--close {
@@ -1591,6 +1592,7 @@ button,
 .modal__wrapper {
   position: relative;
   background-color: #00b2ff;
+  margin-top: 120px;
   padding: 38px 38px 42px;
   width: 500px;
   border-radius: 3px;
