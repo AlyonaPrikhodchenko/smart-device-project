@@ -1,11 +1,12 @@
 import {initForm} from './validation.js';
 
 const openModalWindow = () => {
+  const bodyWrapper = document.querySelector('.wrapper');
   const modalButton = document.querySelector('.header__button');
   const modalWindow = document.querySelector('.modal');
   const modalContent = document.querySelector('.modal__wrapper');
   const INTERECTIVE_ELEMENTS = ['button', 'a', 'input', 'textarea', '[tabindex]'];
-  const interactiveElementsArr = document.querySelectorAll(INTERECTIVE_ELEMENTS);
+  const interactiveElementsArr = bodyWrapper.querySelectorAll(INTERECTIVE_ELEMENTS);
   const modalInteractiveElements = modalWindow.querySelectorAll(INTERECTIVE_ELEMENTS);
 
   if (modalButton && modalWindow) {
@@ -23,15 +24,21 @@ const openModalWindow = () => {
         element.setAttribute('tabindex', '-1');
       });
 
-      modalInteractiveElements.forEach((element) => {
-        element.setAttribute('tabindex', '1');
-      });
-
-
       const form = modalWindow.querySelector('.form-modal');
       initForm(form);
-      const inputName = form.querySelector('input[type=text]');
+      const inputName = form.querySelector('input[tabindex="1"]');
       inputName.focus();
+
+      modalInteractiveElements.forEach((item) => {
+        if (item.dataset.tab === '6') {
+          item.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+              inputName.focus();
+            }
+          });
+        }
+      });
+
     });
 
     closeButton.addEventListener('click', () => {
