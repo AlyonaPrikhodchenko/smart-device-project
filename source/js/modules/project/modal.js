@@ -7,7 +7,6 @@ const openModalWindow = () => {
   const modalContent = document.querySelector('.modal__wrapper');
   const INTERECTIVE_ELEMENTS = ['button', 'a', 'input', 'textarea', '[tabindex]'];
   const interactiveElementsArr = bodyWrapper.querySelectorAll(INTERECTIVE_ELEMENTS);
-  const modalInteractiveElements = modalWindow.querySelectorAll(INTERECTIVE_ELEMENTS);
 
   if (modalButton && modalWindow) {
     const closeButton = document.querySelector('.modal__close-button');
@@ -29,13 +28,11 @@ const openModalWindow = () => {
       const inputName = form.querySelector('input[tabindex="1"]');
       inputName.focus();
 
-      modalInteractiveElements.forEach((item) => {
-        if (item.dataset.tab === '6') {
-          item.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-              inputName.focus();
-            }
-          });
+      const inputClose = modalWindow.querySelector('button[tabindex="6"]');
+      inputClose.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab' || event.keyCode === '9') {
+          event.preventDefault();
+          inputName.focus();
         }
       });
 
@@ -48,10 +45,6 @@ const openModalWindow = () => {
       interactiveElementsArr.forEach((element) => {
         element.setAttribute('tabindex', '1');
       });
-
-      modalInteractiveElements.forEach((element) => {
-        element.setAttribute('tabindex', '-1');
-      });
     });
 
     modalWindow.addEventListener('click', () => {
@@ -60,10 +53,6 @@ const openModalWindow = () => {
 
       interactiveElementsArr.forEach((element) => {
         element.setAttribute('tabindex', '1');
-      });
-
-      modalInteractiveElements.forEach((element) => {
-        element.setAttribute('tabindex', '-1');
       });
     });
   }
